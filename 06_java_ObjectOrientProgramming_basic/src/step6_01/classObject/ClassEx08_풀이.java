@@ -1,6 +1,6 @@
 package step6_01.classObject;
 
-//2023-09-04 17:30 ~ 17:58
+//2023-09-04 17:30 ~ 17:58, 19:00 ~ 19:06
 
 import java.util.Scanner;
 
@@ -20,7 +20,7 @@ import java.util.Scanner;
  */
 
 class Ex08_연습{
-	int[] game = {0, 0, 1, 0, 0, 0, 0, 1, 0};
+	int[] game = {1, 0, 1, 0, 0, 0, 0, 1, 0};
 }
 
 
@@ -32,7 +32,7 @@ public class ClassEx08_풀이 {
 		Ex08_연습 e = new Ex08_연습();
 		int direction = 0;
 		
-		int player = 0;
+		int player = 1;
 		e.game[player] = 2;
 		
 		for(int i = 0; i < e.game.length; i++) {
@@ -56,13 +56,13 @@ public class ClassEx08_풀이 {
 				}
 				else if (player<= 0) System.out.println("더 이상 왼쪽으로 갈 수 없습니다.");
 			}
-			else if (direction == 2 && e.game[player+1] != 1) {
-				if (player < 8) {
+			else if (direction == 2) {
+				if (player < 8 && e.game[player+1] != 1) {
 					e.game[player] = 0;
 					player++;
 					e.game[player] = 2;
 				}
-				else if (player > 0 && e.game[player+1] == 1) {
+				else if (player < 8 && e.game[player+1] == 1) {
 					System.out.print("벽을 격파하려면 3을 누르시오 : ");
 					direction = scan.nextInt();
 					if (direction == 3) e.game[player+1] = 0;
