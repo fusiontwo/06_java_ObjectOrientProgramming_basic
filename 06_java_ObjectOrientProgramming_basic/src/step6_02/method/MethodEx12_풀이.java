@@ -22,27 +22,57 @@ class Ex12_연습 {
 	}
 	
 	// 3. 파일의 확장자를 리턴하는 getFileExtention 메서드를 만드시오.
-	String getFileExtention(String fileName) {return "";}
+	String getFileExtention(String fileName) {
+		String[] temp = fileName.split("\\.");
+		String extention = temp[1];
+		return extention;
+	}
 	
 	// 4. 숫자의 제곱을 계산하여 리턴하는 myPow 메서드를 만드시오.
-	int myPow(int param1 , int param2) {return 0;}
+	int myPow(int param1 , int param2) {
+		int answer = 1;
+		for(int i = 0; i < param2; i++) {
+			answer *= param1;
+		}
+		return answer;
+	}
 	
 	// 5. 문자열에 특정 문자의 위치를 리턴하는 myIndexOf 메서드를 만드시오.
-	int myIndexOf(String data , String word) {return 0;}
+	int myIndexOf(String data , String word) {
+		int location = 0;
+		location = data.indexOf(word);
+		return location;
+	}
 	
 	// 6. 문자열에 특정 위치의 문자를 리턴하는 myCharAt 메서드를 만드시오.
 	// 문자열을 문자 배열로 저장) > [안배운문법] 문자열.toCharArray()
 	// 예시)                      > char[] 변수 = 문자열.toCharArray();
-	char myCharAt(String data , int index) {return '0';}
+	char myCharAt(String data , int index) {
+		char[] alphabet = data.toCharArray();
+		char character = ' ';
+		for (int i = 0; i < alphabet.length; i++) {
+			if (i == index) character = alphabet[i];
+		}
+		return character;
+	}
 	
 	// 7-1. 문자열의 특정위치부터 끝까지의 잘라진 문자열을 리턴하는 mySubString1 메서드를 만드시오.
-	String mySubString1(String data , int startIndex) {return "";}
+	String mySubString1(String data , int startIndex) {
+		String splittedString = data.substring(startIndex);
+		return splittedString;
+	}
 	
 	// 7-2. 문자열의 특정위치부터 특정위치까지의 잘라진 문자열을 리턴하는 mySubString2 메서드를 만드시오.
-	String mySubString2(String data , int startIndex , int endIndex) {return "";}
+	String mySubString2(String data , int startIndex , int endIndex) {
+		String splittedString = data.substring(startIndex, endIndex);
+		return splittedString;
+	}
 	
 	// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
-	String[] mySplit(String data , String sep) {return null;}
+	String[] mySplit(String data , String sep) {
+		String[] temp = data.split(sep);
+		return temp;
+	}
 	
 }
 
