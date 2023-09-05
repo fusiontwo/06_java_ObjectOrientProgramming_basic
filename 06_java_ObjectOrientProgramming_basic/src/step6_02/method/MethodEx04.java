@@ -11,11 +11,37 @@ class VariableEx {
 	}
 }
 
+
+class Zealot {
+	int shield = 60;
+	int hp = 100;
+	
+	void printStatus() {
+		System.out.println("shield : " + this.shield);
+		System.out.println("hp : " + this.hp);
+		System.out.println();
+	}
+}
+
+
+// this : 객체 (오브젝트, 인스턴스) 자신
+
 public class MethodEx04 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Zealot z1 = new Zealot();
+		z1.shield = 0;
+		z1.printStatus();
+		
+		Zealot z2 = new Zealot();
+		z2.shield = 50;
+		z2.hp = 50;
+		z2.printStatus();
+		
+		Zealot z3 = new Zealot();
+		z3.printStatus();
 
 	}
 

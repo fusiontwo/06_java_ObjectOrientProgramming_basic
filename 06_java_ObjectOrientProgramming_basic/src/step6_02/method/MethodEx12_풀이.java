@@ -59,21 +59,42 @@ class Ex12_연습 {
 	// 7-1. 문자열의 특정위치부터 끝까지의 잘라진 문자열을 리턴하는 mySubString1 메서드를 만드시오.
 	String mySubString1(String data , int startIndex) {
 		char[] temp = new char[data.length()];
-		String splittedString = data.substring(startIndex);
+		String splittedString = "";
+
+		for (int i = 0; i < data.length(); i++) {
+			temp[i] = data.charAt(i);
+		}
+		for (int i = startIndex; i < temp.length; i++) {
+			splittedString += temp[i];
+		}
+
 		return splittedString;
 	}
 	
 	// 7-2. 문자열의 특정위치부터 특정위치까지의 잘라진 문자열을 리턴하는 mySubString2 메서드를 만드시오.
 	String mySubString2(String data , int startIndex , int endIndex) {
-		String splittedString = data.substring(startIndex, endIndex);
+		char[] temp = new char[data.length()];
+		String splittedString = "";
+		
+		for (int i = 0; i < data.length(); i++) {
+			temp[i] = data.charAt(i);
+		}
+		for (int i = startIndex; i < endIndex; i++) {
+			splittedString += temp[i];
+		}
+		
 		return splittedString;
 	}
 	
 	// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
-	String[] mySplit(String data , String sep) {
-		String[] temp = data.split(sep);
-		return temp;
-	}
+//	String[] mySplit(String data , String sep) {
+//		String[] temp = new char[data.length()];
+//		for (int i = 0; i < data.length(); i++) {
+//			temp[i] = data.charAt(i);
+//		}
+////		return "";
+//
+//	}
 	
 }
 
@@ -143,11 +164,11 @@ public class MethodEx12_풀이 {
 		System.out.println();
 		
 		// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
-		System.out.println(Arrays.toString(e.mySplit("a,b,c", ",")));		  // [a, b, c]
-		System.out.println(Arrays.toString(e.mySplit("a,b,c,e,f,g", ",")));   // [a, b, c, e, f, g]
-		System.out.println(Arrays.toString(e.mySplit("a/b/c/e/f/g", "/")));   // [a, b, c, e, f, g]
-		System.out.println(Arrays.toString(e.mySplit("goodsCd=1 & goodsNm=스마트 TV & goodsPrice=3000000 & orderQty=1 & ordererId=qwer1234", "&")));  // [goodsCd=1 ,  goodsNm=스마트 TV ,  goodsPrice=3000000 ,  orderQty=1 ,  ordererId=qwer1234]
-		
+//		System.out.println(Arrays.toString(e.mySplit("a,b,c", ",")));		  // [a, b, c]
+//		System.out.println(Arrays.toString(e.mySplit("a,b,c,e,f,g", ",")));   // [a, b, c, e, f, g]
+//		System.out.println(Arrays.toString(e.mySplit("a/b/c/e/f/g", "/")));   // [a, b, c, e, f, g]
+//		System.out.println(Arrays.toString(e.mySplit("goodsCd=1 & goodsNm=스마트 TV & goodsPrice=3000000 & orderQty=1 & ordererId=qwer1234", "&")));  // [goodsCd=1 ,  goodsNm=스마트 TV ,  goodsPrice=3000000 ,  orderQty=1 ,  ordererId=qwer1234]
+//		
 	}
 
 }
