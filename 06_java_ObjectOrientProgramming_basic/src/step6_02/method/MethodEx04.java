@@ -17,6 +17,8 @@ class Zealot {
 	int hp = 100;
 	
 	void printStatus() {
+		// this는 생략이 가능하고, 기본적으로 생략되어 있다.
+		System.out.println("this : " + this);
 		System.out.println("shield : " + this.shield);
 		System.out.println("hp : " + this.hp);
 		System.out.println();
@@ -32,15 +34,18 @@ public class MethodEx04 {
 		// TODO Auto-generated method stub
 		
 		Zealot z1 = new Zealot();
+		System.out.println(z1);
 		z1.shield = 0;
 		z1.printStatus();
 		
 		Zealot z2 = new Zealot();
+		System.out.println(z2);
 		z2.shield = 50;
 		z2.hp = 50;
 		z2.printStatus();
 		
 		Zealot z3 = new Zealot();
+		System.out.println(z3);
 		z3.printStatus();
 
 	}

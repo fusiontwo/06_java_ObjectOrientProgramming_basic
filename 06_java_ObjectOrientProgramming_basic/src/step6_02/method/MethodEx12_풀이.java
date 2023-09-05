@@ -88,11 +88,19 @@ class Ex12_연습 {
 	
 	// 8. 문자열을 특정 키워드로 잘라내어 배열에 담아서 리턴하는 mySplit 메서드를 만드시오.
 //	String[] mySplit(String data , String sep) {
-//		String[] temp = new char[data.length()];
+//		char[] temp = new char[data.length()];
 //		for (int i = 0; i < data.length(); i++) {
 //			temp[i] = data.charAt(i);
 //		}
-////		return "";
+//		String[] splittedArr = new String[data.length()-1];
+//		int flag = 0;
+//		for (int i = 0; i < temp.length; i++) {
+//			if (temp[i].equals(sep)) flag = 1;
+//			if (flag == 0) splittedArr[0] += temp[i];
+//			else if(flag == 1) splittedArr[1] += temp[i];
+//		}
+//		
+//		return splittedArr;
 //
 //	}
 	
