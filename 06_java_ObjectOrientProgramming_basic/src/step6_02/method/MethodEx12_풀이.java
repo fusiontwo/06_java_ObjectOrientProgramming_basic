@@ -58,6 +58,7 @@ class Ex12_연습 {
 	
 	// 7-1. 문자열의 특정위치부터 끝까지의 잘라진 문자열을 리턴하는 mySubString1 메서드를 만드시오.
 	String mySubString1(String data , int startIndex) {
+		char[] temp = new char[data.length()];
 		String splittedString = data.substring(startIndex);
 		return splittedString;
 	}
