@@ -1,5 +1,9 @@
 package step6_02.method;
 
+// 2023-09-06 18:00 ~ 18:19
+// 느낀 점 : 게임 종료 조건을 설정할 때 배열에 0이 있는지 반복문으로 검사하는 방법을 주로 사용했었는데, 
+// correctCnt를 사용해보는 것도 좋을 것 같다.
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
