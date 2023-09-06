@@ -20,34 +20,67 @@ class MemoryGame_연습{
 	int[] front = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
 	int[] back = new int[10];
 	
-	int correctCnt = 0;
+	// 배열 back에 0이 존재하는지 검사하는 방법 대신 correctCnt를 사용하는 방법도 있다.
+//	int correctCnt = 0;  
 	
 	void shuffle() {
-		
+		int i = 0;
+		int temp = 0;
+		int randomNum = 0;
+		while (i < 1000) {
+			temp = front[0];
+			randomNum = ran.nextInt(front.length);
+			front[0] = front[randomNum];
+			front[randomNum] = temp;
+			i++;
+		}
 		
 	}
 	
 	
 	
 	void printCard() {
-		
-
-		
+		System.out.println(Arrays.toString(front));
+		System.out.println(Arrays.toString(back));
 	}
 	
 	
 	
 	void choiceCard() {
-
-		
+		int num1 = 0;
+		int num2 = 0;
+		System.out.print("카드 입력[1~10] : ");
+		num1 = scan.nextInt();		
+		System.out.print("카드 입력[1~10] : ");
+		num2 = scan.nextInt();
+		if (front[num1-1] == front[num2-1]) {
+			back[num1-1] = front[num1-1];
+			back[num2-1] = front[num2-1];
+		}
 	}
 	
 	
 	
 	void run() {
-
+		
+		shuffle();
+		
+		while(true) {
+			int zeroExists = 0;
+			
+			printCard();
+			choiceCard();
+			
+			for (int i = 0; i < back.length; i++) {
+				if (back[i] == 0) zeroExists = 1;
+			}
+			
+			if (zeroExists == 0) {
+				System.out.println("게임 종료");
+				break;
+			}
+		}
 	}
-	
 }
 
 public class MethodEx16_풀이 {
