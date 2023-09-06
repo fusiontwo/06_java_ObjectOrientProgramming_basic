@@ -78,7 +78,10 @@ class TicTacToe_연습{
 	
 	
 	void exitWidth() {
-		
+		for (int i = 0; i < game.length; i++) {
+			if (game[i][0].equals("O") && game[i][1].equals("O") && game[i][2].equals("O")) win = 1;
+			else if (game[i][0].equals("X") && game[i][1].equals("X") && game[i][2].equals("X")) win = 2;			
+		}
 	}
 	
 	
